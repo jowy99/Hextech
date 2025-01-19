@@ -1,22 +1,55 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+// import Footer from "../components/blocks/footer.astro";
+import { ClientRouter } from "astro:transitions";
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content={`Descubre más sobre ${title} y los servicios que ofrezco.`}>
+    <meta name="keywords" content="Web developer, Joël Arnaud Carreras, Desarrollo web, Landing page, Programador junior">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="index, follow">
+
+    <!-- OG Meta Tags -->
+    <meta property="og:url" content="https://test.joelarnaud.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Joël Arnaud Carreras | Web developer">
+    <meta property="og:description" content="Building amazing things">
+    <meta property="og:image" content="https://test.joelarnaud.com/joel.jpeg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="test.joelarnaud.com">
+    <meta property="twitter:url" content="https://test.joelarnaud.com/">
+    <meta name="twitter:title" content="Joël Arnaud Carreras | Web developer">
+    <meta name="twitter:description" content="Building amazing things">
+    <meta name="twitter:image" content="https://test.joelarnaud.com/joel.jpeg">
+    <meta name="twitter:creator" content="@jowy_1999">
+
+    <!-- FavIcon -->
+    <!-- <link rel="shortcut icon" href="/Sagilogo.jpg" type="image/x-icon">
+    <link rel="icon" sizes="57x57" href="/57x57.png" type="image/x-icon">
+    <link rel="icon" sizes="120x120" href="/120x120.png" type="image/x-icon">
+    <link rel="icon" sizes="128x128" href="/128x128.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="150x150" href="/150x150.jpg" type="image/x-icon">
+    <link rel="icon" sizes="167x167" href="/167x167.jpg" type="image/x-icon">
+    <link rel="icon" sizes="192x192" href="/192x192.jpg" type="image/x-icon">
+    <link rel="icon" sizes="196x196" href="/196x196.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="228x228" href="/228x228.jpg" type="image/x-icon"> -->
+
+    <ClientRouter/>
+    
+    <!-- Preload image -->
+    <!-- <link rel="preload" as="image" href="/src/assets/images/joel.jpeg" /> -->
+
+    <title>{title}</title>
+  </head>
+  <body class="font-AlbertSans flex items-center justify-center max-w-7xl mx-auto antialiased dark:bg-verde-500">
+    <slot/>
+    <!-- <Footer/> -->
+  </body>
+</html>

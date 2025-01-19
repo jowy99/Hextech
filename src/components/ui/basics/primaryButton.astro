@@ -1,0 +1,12 @@
+---
+const { type, props } = Astro.props;
+---
+
+<button 
+    type={type}
+    class={`inline-flex items-center text-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white dark:text-white uppercase tracking-widest focus:outline-none focus:ring-2 focus:ring-offset-2 transition ease-in-out duration-150 
+        'bg-carbon-500 dark:bg-dorado-600 hover:bg-dorado-400 dark:hover:bg-dorado-400 focus:bg-carbon-700 dark:focus:bg-dorado-700 active:bg-carbon-900 dark:active:bg-d-400 focus:ring-carbon-500 dark:focus:ring-offset-dorado-800'
+        ${props}`} 
+>
+    <slot />
+</button>
