@@ -23,7 +23,7 @@ export default {
 					"300": "#ead7a7",
 					"400": "#e3cb8d",
 					"500": "#e6cc9b", // Base
-					"600": "#bfab81",
+					"600": "#BFAB81",
 					"700": "#998968",
 					"800": "#73684e",
 					"900": "#4d4634",
@@ -52,6 +52,9 @@ export default {
 					"800": "#63635c",
 					"900": "#32322e",
 				},
+			},
+			fontFamily: {
+				playfair: ['"Playfair"', 'serif'],
 			}
 		},
 	},
