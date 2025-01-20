@@ -1,16 +1,56 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/blocks/hero.astro';
-import Services from '../components/blocks/services.astro'
-import Whyus from '../components/blocks/whyus.astro'
-import Plans from '../components/blocks/plans.astro'
-import Contact from '../components/blocks/contact.astro'
+import Services from '../components/blocks/services.astro';
+import Whyus from '../components/blocks/whyus.astro';
+import Plans from '../components/blocks/plans.astro';
+import Contact from '../components/blocks/contact.astro';
 ---
 
 <Layout title="Hextech | Web development">
-	<Hero />
-	<Services />
-	<Whyus />
-	<Plans />
-	<Contact />
+  <section id="hero">
+    <Hero />
+  </section>
+  <section id="services">
+    <Services />
+  </section>
+  <section id="whyus">
+    <Whyus />
+  </section>
+  <section id="plans">
+    <Plans />
+  </section>
+  <section id="contact">
+    <Contact />
+  </section>
 </Layout>
+
+<script>
+  // Detectar clics en botones o enlaces para navegación
+  const scrollLinks = document.querySelectorAll<HTMLAnchorElement>('[data-scroll]');
+
+  scrollLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      // Asegurar que el atributo href y el ID de destino existen
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      const targetId = href.substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (!targetSection) return;
+
+      // Usar View Transition API si está disponible
+      if (document.startViewTransition) {
+        document.startViewTransition(() => {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        });
+      } else {
+        // Fallback para navegadores no compatibles
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
