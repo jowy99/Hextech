@@ -1,0 +1,53 @@
+---
+import H2 from '../ui/basics/h2.astro'
+import H4 from '../ui/basics/h4.astro'
+import PricingCard from '../ui/elements/pricingCard.astro'
+---
+<section class="flex flex-col items-center justify-center h-screen min-h-screen">
+    <div class="flex flex-col items-center justify-center space-y-14 h-1/4">
+        <H2>planes de soporte</H2>
+        <H4>
+            Elige el plan según tus necesidades y empecemos a trabajar juntos.
+        </H4>
+    </div>
+    <div class="grid items-center w-full grid-cols-3 gap-8 h-1/2 justify-items-center">
+        <div class="w-4/5 h-full">
+            <PricingCard
+                title="Básico"
+                price="9"
+                description="Ideal si ya dispones de un servidor web."
+                features={[
+                    "Solución de 1 error mensual",
+                    "1 levantamiento de sitio web",
+                    "1 modificación web mensual"
+                ]}
+            />
+        </div>
+        <div class="w-4/5 h-full">
+            <PricingCard
+                title="Pro"
+                price="19"
+                description="Ideal si tienes un servidor web pero no quieres complicarte."
+                features={[
+                    "Solución de 5 errores mensuales",
+                    "Levantamiento web",
+                    "5 modificaciones web mensuales",
+                    "Instalación web"
+                ]}
+            />
+        </div>
+        <div class="w-4/5 h-full">
+            <PricingCard
+                title="Premium"
+                price="49"
+                description="Ideal si tienes las ideas claras y no quieres problemas."
+                features={[
+                    "Solución de errores",
+                    "Levantamiento web",
+                    "Modificaciones web",
+                    "Instalación web",
+                ]}
+            />
+        </div>
+    </div>
+</section>
