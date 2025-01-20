@@ -1,0 +1,51 @@
+---
+import H2 from '../ui/basics/h2.astro'
+import H4 from '../ui/basics/h4.astro'
+import P from '../ui/basics/p.astro'
+import PrimaryButton from '../ui/basics/primaryButton.astro'
+import Ray from '../ui/icons/ray.astro'
+import Graphic from '../ui/icons/graphic.astro'
+import Crown from '../ui/icons/crown.astro'
+---
+<section class="flex flex-col items-center justify-center h-screen min-h-screen space-y-14">
+    <div class="flex flex-col items-center justify-center pt-32 space-y-24 h-1/4">
+        <H2 props="drop-shadow-md">Calidad, Rendimiento y Exclusividad en cada proyecto</H2>
+        <H4 props="mx-32">
+            Olvida las plantillas y aplicaciones genéricas. Creamos páginas web únicas con código fuente diseñado para tu proyecto.
+        </H4>
+    </div>
+    <!-- Características -->
+     <div class="flex flex-col items-center justify-center space-y-24 h-1/2">
+        <div class="grid items-center w-full max-w-6xl grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-16">
+            <!-- Rápido -->
+            <div class="flex flex-col items-center space-y-6 text-center">
+            <Ray class="w-20 h-20 lg:w-24 lg:h-24 text-dorado-500 drop-shadow-lg" />
+            <P class="text-gray-700">
+                Nuestro código está diseñado para ser <span class="font-extrabold text-dorado-500">rápido</span>, eficiente y libre de elementos innecesarios. A diferencia de WordPress, cada línea es escrita específicamente para tu proyecto, garantizando un rendimiento superior y una experiencia única.
+            </P>
+            </div>
+    
+            <!-- Escalable -->
+            <div class="flex flex-col items-center space-y-6 text-center">
+            <Graphic class="w-20 h-20 lg:w-24 lg:h-24 text-dorado-500 drop-shadow-lg" />
+            <P class="text-gray-700">
+                Desarrollamos soluciones web <span class="font-extrabold text-dorado-500">escalables</span> y adaptadas a tus necesidades. Nuestro código crece contigo, ajustándose a cualquier cambio o desafío, asegurando un producto duradero y eficiente.
+            </P>
+            </div>
+    
+            <!-- Premium -->
+            <div class="flex flex-col items-center space-y-6 text-center">
+            <Crown class="w-20 h-20 lg:w-24 lg:h-24 text-dorado-500 drop-shadow-lg" />
+            <P class="text-gray-700">
+                Creamos páginas <span class="font-extrabold text-dorado-500">premium</span> totalmente personalizadas, libres de plantillas genéricas. Cada proyecto está diseñado para reflejar exclusividad, calidad y el valor único de tu marca.
+            </P>
+            </div>
+            <!-- Botón -->
+        </div>
+        <div class="col-span-2 mt-10">
+            <PrimaryButton props="w-fit px-6 py-3 text-lg lg:text-xl">
+                Hablemos de tu proyecto
+            </PrimaryButton>
+        </div>
+     </div>
+</section>
