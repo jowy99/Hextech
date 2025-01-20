@@ -4,17 +4,21 @@ import H4 from '../ui/basics/h4.astro'
 import PrimaryButton from '../ui/basics/primaryButton.astro'
 import SecondaryButton from '../ui/basics/secondaryButton.astro'
 ---
-<section class="flex flex-col items-center justify-center min-h-screen space-y-14">
+<section id="hero" class="flex flex-col items-center justify-center min-h-screen space-y-14">
     <div class="space-y-24">
-        <H1 props="">
+        <H1 props="animate-fade-in-down">
             Webs hechas para destacar
         </H1>
-        <H4 props="mx-24">
+        <H4 props="mx-24 animate-fade-in animate-delay-200">
             Diseñamos y creamos webs exclusivas y optimizadas para potenciar tu negocio digital y superar las plantillas convencionales.
         </H4>
     </div>
-    <div class="space-x-12">
-        <PrimaryButton>Solicitar reunión</PrimaryButton>
-        <SecondaryButton>Nuestros servicios</SecondaryButton>
+    <div class="space-x-12 animate-fade-in animate-delay-100">
+        <a href="/#contact" aria-label="Formulario de contacto">
+            <PrimaryButton>Solicitar reunión</PrimaryButton>
+        </a>
+        <a href="/#services" aria-label="Servicios que proporcionamos">
+            <SecondaryButton>Nuestros servicios</SecondaryButton>
+        </a>
     </div>
 </section>

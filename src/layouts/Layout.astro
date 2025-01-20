@@ -1,7 +1,6 @@
 ---
 import Nav from "../components/blocks/nav.astro";
-// import Footer from "../components/blocks/footer.astro";
-import { ClientRouter } from "astro:transitions";
+import Footer from "../components/blocks/footer.astro";
 import Blur from "../components/ui/elements/blur.astro";
 
 const { title } = Astro.props;
@@ -48,14 +47,14 @@ const { title } = Astro.props;
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
 
-    <ClientRouter/>
-
     <title>{title}</title>
   </head>
-  <body class="relative mx-auto antialiased bg-verde-500 font-playfair max-w-7xl dark:bg-negro-500">
+  <body class="antialiased bg-verde-500 dark:bg-negro-500 font-playfair">
 	<Blur/>
-	<Nav />
-	<slot />
-    <!-- <Footer /> -->
+	<main class="relative mx-auto max-w-7xl">
+		<Nav />
+		<slot />
+	</main>
+    <Footer />
   </body>
 </html>

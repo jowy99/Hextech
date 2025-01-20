@@ -1,0 +1,22 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="py-8 bg-verde-700 dark:bg-negro-700 text-beige-200">
+  <nav class="container flex flex-col items-center mx-auto space-y-4 text-center" aria-label="Footer navigation">
+    <ul class="flex space-x-4">
+      <li>
+        <a href="/aviso-legal" class="text-md hover:underline">Aviso Legal</a>
+      </li>
+      <li>
+        <span class="text-beige-400">|</span>
+      </li>
+      <li>
+        <a href="/politica-privacidad" class="text-md hover:underline">Política de Privacidad</a>
+      </li>
+    </ul>
+    <p class="text-md text-beige-400">
+      © {year} Hextech. Todos los derechos reservados.
+    </p>
+  </nav>
+</footer>

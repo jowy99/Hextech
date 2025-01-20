@@ -3,15 +3,15 @@ import H2 from '../ui/basics/h2.astro'
 import H4 from '../ui/basics/h4.astro'
 import PricingCard from '../ui/elements/pricingCard.astro'
 ---
-<section class="flex flex-col items-center justify-center h-screen min-h-screen">
-    <div class="flex flex-col items-center justify-center space-y-14 h-1/4">
+<main id="services" class="flex flex-col items-center justify-center h-screen min-h-screen">
+    <section class="flex flex-col items-center justify-center space-y-14 h-1/4">
         <H2>nuestros servicios</H2>
         <H4>
             Elige el plan que se ajusta a tus objetivos y necesidades empresariales. Todos nuestros servicios son modificables y adaptables.
         </H4>
-    </div>
-    <div class="grid items-center w-full grid-cols-2 gap-8 h-1/2 justify-items-center">
-        <div class="w-4/5 h-full">
+    </section>
+    <section class="grid items-center w-full grid-cols-2 gap-8 h-1/2 justify-items-center">
+        <article class="w-4/5 h-full">
             <PricingCard
                 title="Landing page"
                 price="199"
@@ -21,8 +21,8 @@ import PricingCard from '../ui/elements/pricingCard.astro'
                     "SEO"
                 ]}
             />
-        </div>
-        <div class="w-4/5 h-full">
+        </article>
+        <article class="w-4/5 h-full">
             <PricingCard
                 title="Gestor de Base de Datos"
                 price="299"
@@ -33,6 +33,6 @@ import PricingCard from '../ui/elements/pricingCard.astro'
                     "Multiplataforma",
                 ]}
             />
-        </div>
-    </div>
-</section>
+        </article>
+    </section>
+</main>
