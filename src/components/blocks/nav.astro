@@ -1,13 +1,20 @@
 ---
+import Dropdown from "../ui/elements/langDropdown.jsx";
+import Toggle from "../ui/elements/toggle.jsx";
 ---
+
 <nav class="fixed top-0 left-0 z-50 w-full bg-verde-600 dark:bg-negro-600">
-    <div class="container flex items-center justify-between px-4 py-3 mx-auto max-w-7xl">
-      <!-- Logo -->
-      <h1 class="text-2xl font-extrabold text-white drop-shadow-md lg:text-4xl">Hextech</h1>
-  
-      <!-- Botón de idioma -->
-      <button class="px-4 py-2 text-sm font-bold text-white border rounded-md shadow-md border-dorado-600 hover:bg-dorado-500 lg:text-md">
-        ES
-      </button>
-    </div>
+  <div class="container flex items-center justify-between px-4 py-3 mx-auto max-w-7xl">
+    <!-- Logo -->
+    <h1 class="text-2xl font-extrabold text-white drop-shadow-md lg:text-4xl">Hextech</h1>
+
+    <Toggle client:load/>
+
+    <!-- Dropdown para seleccionar idioma -->
+    <Dropdown
+        languages={["ES", "EN", "FR"]}
+        selectedLanguage="ES"
+        onLanguageChange=(lang: string)
+    />
+  </div>
 </nav>
