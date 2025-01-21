@@ -3,61 +3,62 @@ import H2 from '../ui/basics/h2.astro';
 import H4 from '../ui/basics/h4.astro';
 import PrimaryButton from '../ui/basics/primaryButton.astro';
 ---
-<main id="contact" class="flex flex-col items-center justify-center h-screen min-h-screen px-4 space-y-14">
-  <section class="flex flex-col items-center justify-center pt-32 space-y-16 h-1/4">
-    <H2 props="drop-shadow-md">Hablemos de tu proyecto</H2>
-    <H4 props="text-center max-w-3xl">
-      ¿Tienes una idea en mente? Rellena el formulario y nos pondremos en contacto contigo lo antes posible.
-    </H4>
-  </section>
-  <!-- Formulario -->
-  <section class="flex flex-col items-center justify-center w-full space-y-16 h-1/2">
-    <form action="" class="flex flex-col items-center justify-center w-full max-w-4xl space-y-8">
+<main id="contact" class="flex flex-col items-center justify-center px-4 pt-32 mb-32 space-y-16 xl:pt-0 xl:mb-0 lg:px-8 min-h-dvh lg:min-h-screen">
+    <section class="flex flex-col items-center justify-center max-w-full space-y-12">
+      <H2 props="drop-shadow-md">Hablemos de tu proyecto</H2>
+      <H4 props="text-center max-w-3xl">
+        ¿Tienes una idea en mente? Rellena el formulario y nos pondremos en contacto contigo lo antes posible.
+      </H4>
+    </section>
+    <!-- Formulario -->
+    <section class="flex flex-col items-center justify-center w-full max-w-full space-y-12">
+      <form action="#" class="flex flex-col w-full max-w-4xl space-y-8">
         <!-- Nombre y Apellido -->
-        <div class="grid w-full grid-cols-1 gap-6 md:grid-cols-2">
-            <div class="flex flex-col w-full space-y-1">
+        <div class="grid w-full grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          <div class="flex flex-col w-full space-y-2">
             <label for="name" class="text-lg font-semibold text-beige-500">Nombre</label>
             <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Nombre"
-                class="w-full px-4 py-3 transition duration-200 border rounded-lg shadow-sm text-negro-700 focus:outline-none focus:ring-2 focus:ring-dorado-500 focus:border-dorado-500"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Nombre"
+              class="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none text-negro-700 focus:ring-2 focus:ring-dorado-500 focus:border-dorado-500"
             />
-            </div>
-            <div class="flex flex-col w-full space-y-1">
+          </div>
+          <div class="flex flex-col w-full space-y-2">
             <label for="surname" class="text-lg font-semibold text-beige-500">Apellido</label>
             <input
-                type="text"
-                id="surname"
-                name="surname"
-                placeholder="Apellido"
-                class="w-full px-4 py-3 transition duration-200 border rounded-lg shadow-sm text-negro-700 focus:outline-none focus:ring-2 focus:ring-dorado-500 focus:border-dorado-500"
+              type="text"
+              id="surname"
+              name="surname"
+              placeholder="Apellido"
+              class="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none text-negro-700 focus:ring-2 focus:ring-dorado-500 focus:border-dorado-500"
             />
-            </div>
+          </div>
         </div>
         <!-- Email -->
-        <div class="flex flex-col w-full space-y-1">
-            <label for="email" class="text-lg font-semibold text-beige-500">Email</label>
-            <input
+        <div class="flex flex-col w-full space-y-2">
+          <label for="email" class="text-lg font-semibold text-beige-500">Email</label>
+          <input
             type="email"
             id="email"
             name="email"
             placeholder="ejemplo@correo.com"
-            class="w-full px-4 py-3 transition duration-200 border rounded-lg shadow-sm text-negro-700 focus:outline-none focus:ring-2 focus:ring-dorado-500 focus:border-dorado-500"
-            />
+            class="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none text-negro-700 focus:ring-2 focus:ring-dorado-500 focus:border-dorado-500"
+          />
         </div>
         <!-- Mensaje -->
-        <div class="flex flex-col w-full space-y-1">
-            <label for="message" class="text-lg font-semibold text-beige-500">Mensaje</label>
-            <textarea
+        <div class="flex flex-col w-full space-y-2">
+          <label for="message" class="text-lg font-semibold text-beige-500">Mensaje</label>
+          <textarea
             id="message"
             name="message"
             rows="5"
             placeholder="Cuéntanos sobre tu idea..."
-            class="w-full px-4 py-3 transition duration-200 border rounded-lg shadow-sm text-negro-700 focus:outline-none focus:ring-2 focus:ring-dorado-500 focus:border-dorado-500"
-            ></textarea>
+            class="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none text-negro-700 focus:ring-2 focus:ring-dorado-500 focus:border-dorado-500"
+          ></textarea>
         </div>
+        <!-- Checkbox -->
         <div class="flex w-full gap-3">
             <div class="flex items-center h-6 shrink-0">
             <div class="grid grid-cols-1 group size-4">
@@ -70,12 +71,12 @@ import PrimaryButton from '../ui/basics/primaryButton.astro';
             </div>
             <label for="policy" class="font-medium text-beige-500">Acepto la Política de Privacidad</label>
         </div>
-    </form>
-    <!-- Botón -->
-    <div class="mt-6">
-      <PrimaryButton props="w-fit px-6 py-3 text-lg lg:text-xl">
-        Enviar mensaje
-      </PrimaryButton>
-    </div>
-  </section>
-</main>
+      </form>
+      <!-- Botón -->
+      <div class="mt-6">
+        <PrimaryButton>
+          Enviar mensaje
+        </PrimaryButton>
+      </div>
+    </section>
+  </main>

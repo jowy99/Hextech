@@ -1,38 +1,40 @@
 ---
-import H2 from '../ui/basics/h2.astro'
-import H4 from '../ui/basics/h4.astro'
-import PricingCard from '../ui/elements/pricingCard.astro'
+import H2 from '../ui/basics/h2.astro';
+import H4 from '../ui/basics/h4.astro';
+import PricingCard from '../ui/elements/pricingCard.astro';
 ---
-<main id="services" class="flex flex-col items-center justify-center h-screen min-h-screen">
-    <section class="flex flex-col items-center justify-center space-y-14 h-1/4">
-        <H2>nuestros servicios</H2>
-        <H4>
-            Elige el plan que se ajusta a tus objetivos y necesidades empresariales. Todos nuestros servicios son modificables y adaptables.
-        </H4>
-    </section>
-    <section class="grid items-center w-full grid-cols-2 gap-8 h-1/2 justify-items-center">
-        <article class="w-4/5 h-full">
-            <PricingCard
-                title="Landing page"
-                price="199"
-                description="Ideal para presentar tu negocio de forma activa y directa."
-                features={[
-                    "3 páginas",
-                    "SEO"
-                ]}
-            />
-        </article>
-        <article class="w-4/5 h-full">
-            <PricingCard
-                title="Gestor de Base de Datos"
-                price="299"
-                description="Solución para gestionar tu información de forma segura y eficiente."
-                features={[
-                    "Gestión de stocks",
-                    "Gestión de clientes",
-                    "Multiplataforma",
-                ]}
-            />
-        </article>
-    </section>
+
+<main id="services" class="flex flex-col items-center justify-center space-y-6 lg:pt-0 md:space-y-14 h-max min-h-dvh lg:h-screen lg:min-h-screen">
+  <section class="flex flex-col items-center justify-center space-y-6 md:space-y-14 h-1/4">
+    <H2 props="text-center">nuestros servicios</H2>
+    <H4>
+      Elige el plan que se ajusta a tus objetivos y necesidades empresariales. Todos nuestros servicios son modificables y adaptables.
+    </H4>
+  </section>
+  <section aria-labelledby="services-title" class="grid items-center w-full grid-cols-1 gap-8 justify-items-center md:grid-cols-2 h-1/2">
+    <h2 id="services-title" class="sr-only">Servicios disponibles</h2>
+    <article class="w-full h-full max-w-sm lg:max-w-lg xl:max-w-xl" aria-label="Servicio Landing Page">
+      <PricingCard
+        title="Landing page"
+        price="199"
+        description="Ideal para presentar tu negocio de forma activa y directa."
+        features={[
+          "3 páginas",
+          "SEO"
+        ]}
+      />
+    </article>
+    <article class="w-full h-full max-w-sm lg:max-w-lg xl:max-w-xl" aria-label="Gestor de Base de Datos">
+      <PricingCard
+        title="Gestor de Base de Datos"
+        price="299"
+        description="Solución para gestionar tu información de forma segura y eficiente."
+        features={[
+          "Gestión de stocks",
+          "Gestión de clientes",
+          "Multiplataforma",
+        ]}
+      />
+    </article>
+  </section>
 </main>

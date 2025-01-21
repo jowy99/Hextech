@@ -13,8 +13,7 @@ const {
   features = [],
 }: ServiceCardProps = Astro.props;
 ---
-<div class="flex items-center w-full h-full">
-  <div class="relative flex flex-col w-full h-full p-8 bg-white shadow-2xl dark:bg-verde-500 rounded-3xl ring-1 ring-gray-900/10 sm:p-10">
+<div class="flex flex-col w-full h-full p-8 lg:p-10 bg-white shadow-2xl dark:bg-verde-500 rounded-3xl ring-1 ring-gray-900/10 min-h-[500px]">
     <h3 id="tier-personal" class="text-xl font-semibold text-dorado-600 dark:text-dorado-500">{title}</h3>
     <p class="flex items-baseline mt-4 gap-x-2">
       <span class="text-5xl font-extrabold text-negro-500 dark:text-beige-500">{price}</span>
@@ -22,9 +21,9 @@ const {
       <span class="text-base text-gray-500 dark:text-beige-500">€</span>
     </p>
     <p class="mt-6 text-gray-600 dark:text-beige-500 text-md">{description}</p>
-    <ul role="list" class="mt-8 space-y-3 text-lg text-gray-600 dark:text-beige-500 sm:mt-4">
+    <ul role="list" class="mt-6 space-y-3 text-lg text-gray-600 dark:text-beige-500">
       {features.map((feature: string) => (
-        <li class="flex font-bold gap-x-3">
+        <li class="flex items-start font-bold gap-x-3">
           <svg class="flex-none w-5 h-6 text-dorado-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
           </svg>
@@ -32,10 +31,10 @@ const {
         </li>
       ))}
     </ul>
-    <div class="mt-auto">
-      <a href="/#contact" aria-label="Solicitar servicio" aria-describedby="tier-personal" class="block px-4 py-2 text-lg font-semibold text-center text-white uppercase rounded-md shadow bg-dorado-600 hover:bg-dorado-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dorado-600">
-        Quiero este sericio
+    <!-- Botón ajustado -->
+    <div class="pt-6 mt-auto">
+      <a href="/#contact" aria-label="Solicitar servicio" aria-describedby="tier-personal" class="block px-4 py-3 text-sm font-semibold text-center text-white uppercase rounded-md shadow lg:text-md bg-dorado-600 hover:bg-dorado-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dorado-600">
+        Quiero este servicio
       </a>
     </div>
-  </div>
 </div>
