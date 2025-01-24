@@ -11,7 +11,7 @@ import { getStaticPaths } from '../../utils/languages';
 export { getStaticPaths };
 
 const { lang } = Astro.params;
-const t = await loadTranslations(lang); // Ejecuta la función para cargar traducciones
+const t = await loadTranslations(lang || 'en'); // Ejecuta la función para cargar traducciones
 ---
 
 <Layout title={t.general.title} lang={lang}>
