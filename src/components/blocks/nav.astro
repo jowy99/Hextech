@@ -1,6 +1,20 @@
 ---
 import Dropdown from "../ui/elements/langDropdown.jsx";
 import Toggle from "../ui/elements/toggle.jsx";
+import { getSupportedLanguages } from "../../utils/i18n.js";
+
+const supportedLangs = getSupportedLanguages();
+const currentLang = Astro.url.pathname.split('/')[1]?.toLowerCase() || 'en';
+
+function handleLanguageChange(lang: string) {
+  console.log('Idioma seleccionado:', lang); // Depuración
+  if (lang === currentLang) return;
+
+  const newPath = `/${lang.toLowerCase()}${Astro.url.pathname.replace(/^\/(en|es)/, '')}`;
+  console.log('Redirigiendo a:', newPath); // Verificar la nueva URL
+
+  window.location.href = newPath; // Cambiar la URL
+}
 ---
 
 <nav class="fixed top-0 left-0 z-50 w-full bg-verde-600 dark:bg-negro-600">
@@ -8,13 +22,12 @@ import Toggle from "../ui/elements/toggle.jsx";
     <!-- Logo -->
     <h1 class="text-2xl font-extrabold text-white drop-shadow-md lg:text-4xl">Hextech</h1>
 
-    <Toggle client:load/>
+    <Toggle client:load />
 
-    <!-- Dropdown para seleccionar idioma -->
     <Dropdown
-        languages={["ES", "EN", "FR"]}
-        selectedLanguage="ES"
-        onLanguageChange=(lang: string)
+        client:load
+        languages={supportedLangs.filter((lang: string) => lang !== currentLang)}
+        onLanguageChange={handleLanguageChange}
     />
   </div>
 </nav>

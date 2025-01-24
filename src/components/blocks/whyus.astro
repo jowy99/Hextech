@@ -6,12 +6,16 @@ import PrimaryButton from '../ui/basics/primaryButton.astro';
 import Ray from '../ui/icons/ray.astro';
 import Graphic from '../ui/icons/graphic.astro';
 import Crown from '../ui/icons/crown.astro';
+
+const { t, lang } = Astro.props;
 ---
 <main id="whyus" class="flex flex-col items-center justify-center min-h-screen space-y-14">
     <section class="flex flex-col items-center justify-center pt-32 space-y-24">
-      <H2 props="drop-shadow-md">Calidad, Rendimiento y Exclusividad en cada proyecto</H2>
+      <H2 props="drop-shadow-md">
+        {t.whyus.title}
+      </H2>
       <H4 props="mx-6 md:mx-16 lg:mx-32">
-        Olvida las plantillas y aplicaciones genéricas. Creamos páginas web únicas con código fuente diseñado para tu proyecto.
+        {t.whyus.description}
       </H4>
     </section>
     <!-- Características -->
@@ -20,31 +24,25 @@ import Crown from '../ui/icons/crown.astro';
         <!-- Rápido -->
         <article class="flex flex-col items-center justify-center space-y-6 text-center">
           <Ray class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-dorado-500 drop-shadow-lg" />
-          <P>
-            Nuestro código está diseñado para ser <span class="font-extrabold text-dorado-500">rápido</span>, eficiente y libre de elementos innecesarios. A diferencia de WordPress, cada línea es escrita específicamente para tu proyecto, garantizando un rendimiento superior y una experiencia única.
-          </P>
+          <P set:html={t.whyus.features.f1} />
         </article>
   
         <!-- Escalable -->
         <article class="flex flex-col items-center justify-center space-y-6 text-center">
           <Graphic class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-dorado-500 drop-shadow-lg" />
-          <P>
-            Desarrollamos soluciones web <span class="font-extrabold text-dorado-500">escalables</span> y adaptadas a tus necesidades. Nuestro código crece contigo, ajustándose a cualquier cambio o desafío, asegurando un producto duradero y eficiente.
-          </P>
+          <P set:html={t.whyus.features.f2} />
         </article>
   
         <!-- Premium -->
         <article class="flex flex-col items-center justify-center space-y-6 text-center">
           <Crown class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-dorado-500 drop-shadow-lg" />
-          <P>
-            Creamos páginas <span class="font-extrabold text-dorado-500">premium</span> totalmente personalizadas, libres de plantillas genéricas. Cada proyecto está diseñado para reflejar exclusividad, calidad y el valor único de tu marca.
-          </P>
+          <P set:html={t.whyus.features.f3} />
         </article>
       </section>
       <!-- Botón -->
-      <a href="/#contact" aria-label="Formulario de contacto" class="col-span-2 mt-10">
+      <a href={`/${lang}/#contact`} aria-label="Formulario de contacto" class="col-span-2 mt-10">
         <PrimaryButton>
-          Hablemos de tu proyecto
+            {t.whyus.button}
         </PrimaryButton>
       </a>
     </div>

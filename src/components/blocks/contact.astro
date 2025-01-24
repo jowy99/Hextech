@@ -2,12 +2,16 @@
 import H2 from '../ui/basics/h2.astro';
 import H4 from '../ui/basics/h4.astro';
 import PrimaryButton from '../ui/basics/primaryButton.astro';
+
+const { t, lang } = Astro.props;
 ---
 <main id="contact" class="flex flex-col items-center justify-center px-4 pt-32 mb-32 space-y-16 xl:pt-0 xl:mb-0 lg:px-8 min-h-dvh lg:min-h-screen">
     <section class="flex flex-col items-center justify-center max-w-full space-y-12">
-      <H2 props="drop-shadow-md">Hablemos de tu proyecto</H2>
+      <H2 props="drop-shadow-md">
+        {t.contact.title}
+      </H2>
       <H4 props="text-center max-w-3xl">
-        ¿Tienes una idea en mente? Rellena el formulario y nos pondremos en contacto contigo lo antes posible.
+        {t.contact.description}
       </H4>
     </section>
     <!-- Formulario -->
@@ -16,45 +20,45 @@ import PrimaryButton from '../ui/basics/primaryButton.astro';
         <!-- Nombre y Apellido -->
         <div class="grid w-full grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
           <div class="flex flex-col w-full space-y-2">
-            <label for="name" class="text-lg font-semibold text-beige-500">Nombre</label>
+            <label for="name" class="text-lg font-semibold text-beige-500">{t.contact.form.name.title}</label>
             <input
               type="text"
               id="name"
               name="name"
-              placeholder="Nombre"
+              placeholder={t.contact.form.name.placeholder}
               class="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none text-negro-700 focus:ring-2 focus:ring-dorado-500 focus:border-dorado-500"
             />
           </div>
           <div class="flex flex-col w-full space-y-2">
-            <label for="surname" class="text-lg font-semibold text-beige-500">Apellido</label>
+            <label for="surname" class="text-lg font-semibold text-beige-500">{t.contact.form.surname.title}</label>
             <input
               type="text"
               id="surname"
               name="surname"
-              placeholder="Apellido"
+              placeholder={t.contact.form.surname.placeholder}
               class="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none text-negro-700 focus:ring-2 focus:ring-dorado-500 focus:border-dorado-500"
             />
           </div>
         </div>
         <!-- Email -->
         <div class="flex flex-col w-full space-y-2">
-          <label for="email" class="text-lg font-semibold text-beige-500">Email</label>
+          <label for="email" class="text-lg font-semibold text-beige-500">{t.contact.form.email.title}</label>
           <input
             type="email"
             id="email"
             name="email"
-            placeholder="ejemplo@correo.com"
+            placeholder={t.contact.form.email.placeholder}
             class="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none text-negro-700 focus:ring-2 focus:ring-dorado-500 focus:border-dorado-500"
           />
         </div>
         <!-- Mensaje -->
         <div class="flex flex-col w-full space-y-2">
-          <label for="message" class="text-lg font-semibold text-beige-500">Mensaje</label>
+          <label for="message" class="text-lg font-semibold text-beige-500">{t.contact.form.msg.title}</label>
           <textarea
             id="message"
             name="message"
             rows="5"
-            placeholder="Cuéntanos sobre tu idea..."
+            placeholder={t.contact.form.msg.placeholder}
             class="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none text-negro-700 focus:ring-2 focus:ring-dorado-500 focus:border-dorado-500"
           ></textarea>
         </div>
@@ -69,13 +73,13 @@ import PrimaryButton from '../ui/basics/primaryButton.astro';
                 </svg>
             </div>
             </div>
-            <label for="policy" class="font-medium text-beige-500">Acepto la Política de Privacidad</label>
+            <label for="policy" class="font-medium text-beige-500">{t.contact.form.checkbox.title}</label>
         </div>
       </form>
       <!-- Botón -->
       <div class="mt-6">
         <PrimaryButton>
-          Enviar mensaje
+            {t.contact.form.button}
         </PrimaryButton>
       </div>
     </section>

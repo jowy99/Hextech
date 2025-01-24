@@ -1,18 +1,20 @@
 ---
 const year = new Date().getFullYear();
+const { t, lang } = Astro.props;
+
 ---
 
 <footer class="py-8 bg-verde-600 dark:bg-negro-600 text-beige-200">
   <nav class="container flex flex-col items-center mx-auto space-y-4 text-center" aria-label="Footer navigation">
     <ul class="flex space-x-4">
       <li>
-        <a href="/aviso-legal" aria-label="Aviso legal" class="text-md hover:underline">Aviso Legal</a>
+        <a href={`/${lang}/aviso-legal`} aria-label="Aviso legal" class="text-md hover:underline">Aviso Legal</a>
       </li>
       <li>
         <span class="text-beige-400">|</span>
       </li>
       <li>
-        <a href="/politica-privacidad" aria-label="Politica de privacidad" class="text-md hover:underline">Política de Privacidad</a>
+        <a href={`/${lang}/politica-privacidad`} aria-label="Politica de privacidad" class="text-md hover:underline">Política de Privacidad</a>
       </li>
     </ul>
     <p class="text-md text-beige-400">

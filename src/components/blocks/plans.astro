@@ -1,26 +1,31 @@
 ---
 import H2 from '../ui/basics/h2.astro'
 import H4 from '../ui/basics/h4.astro'
-import PricingCard from '../ui/elements/pricingCard.astro'
+import PricingCard from '../ui/elements/planCard.astro'
+
+const { t, lang } = Astro.props;
 ---
 <main id="plans" class="flex flex-col items-center justify-center pt-32 space-y-8 lg:pt-0 h-max min-h-dvh lg:h-screen lg:min-h-screen md:space-y-12 lg:space-y-14">
     <section class="flex flex-col items-center justify-center space-y-6">
-      <H2>planes de soporte</H2>
+      <H2>
+        {t.plans.title}
+      </H2>
       <H4>
-        Elige el plan según tus necesidades y empecemos a trabajar juntos.
+        {t.plans.description}
       </H4>
     </section>
     <section class="grid items-center w-full grid-cols-1 gap-8 justify-items-center h-1/2 max-w-7xl md:grid-cols-2 lg:grid-cols-3 md:gap-10 lg:gap-12">
       <!-- Básico -->
       <article class="flex flex-col w-full h-full max-w-sm lg:max-w-none">
         <PricingCard
-          title="Básico"
+          t={t}
+          title={t.plans.cards.basic.title}
           price="9"
-          description="Ideal si ya dispones de un servidor web."
+          description={t.plans.cards.basic.description}
           features={[
-            "Solución de 1 error mensual",
-            "1 levantamiento de sitio web",
-            "1 modificación web mensual"
+            `${t.plans.cards.basic.features.f1}`,
+            `${t.plans.cards.basic.features.f2}`,
+            `${t.plans.cards.basic.features.f3}`,        
           ]}
         />
       </article>
@@ -28,30 +33,32 @@ import PricingCard from '../ui/elements/pricingCard.astro'
       <!-- Pro -->
       <article class="flex flex-col w-full h-full max-w-sm lg:max-w-none">
         <PricingCard
-          title="Pro"
-          price="19"
-          description="Ideal si tienes un servidor web pero no quieres complicarte."
-          features={[
-            "Solución de 5 errores mensuales",
-            "Levantamiento web",
-            "5 modificaciones web mensuales",
-            "Instalación web"
-          ]}
+            t={t}
+            title={t.plans.cards.pro.title}
+            price="19"
+            description={t.plans.cards.pro.description}
+            features={[
+                `${t.plans.cards.pro.features.f1}`,
+                `${t.plans.cards.pro.features.f2}`,
+                `${t.plans.cards.pro.features.f3}`,
+                `${t.plans.cards.pro.features.f4}`,
+            ]}
         />
       </article>
   
       <!-- Premium -->
       <article class="flex flex-col w-full h-full max-w-sm lg:max-w-none">
         <PricingCard
-          title="Premium"
-          price="49"
-          description="Ideal si tienes las ideas claras y no quieres problemas."
-          features={[
-            "Solución de errores",
-            "Levantamiento web",
-            "Modificaciones web",
-            "Instalación web",
-          ]}
+            t={t}
+            title={t.plans.cards.premium.title}
+            price="49"
+            description={t.plans.cards.premium.description}
+            features={[
+                `${t.plans.cards.premium.features.f1}`,
+                `${t.plans.cards.premium.features.f2}`,
+                `${t.plans.cards.premium.features.f3}`,
+                `${t.plans.cards.premium.features.f4}`,
+            ]}
         />
       </article>
     </section>

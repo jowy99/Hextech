@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/blocks/hero.astro';
+import Services from '../../components/blocks/services.astro';
+import Whyus from '../../components/blocks/whyus.astro';
+import Plans from '../../components/blocks/plans.astro';
+import Contact from '../../components/blocks/contact.astro';
+import { loadTranslations } from '../../utils/loadTranslations';
+import { getStaticPaths } from '../../utils/languages';
+
+export { getStaticPaths };
+
+const { lang } = Astro.params;
+const t = await loadTranslations(lang); // Ejecuta la función para cargar traducciones
+---
+
+<Layout title={t.general.title} lang={lang}>
+  <Hero t={t} lang={lang} />
+  <Services t={t} lang={lang} />
+  <Whyus t={t} lang={lang} />
+  <Plans t={t} lang={lang} />
+  <Contact t={t} lang={lang} />
+</Layout>

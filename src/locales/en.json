@@ -1,0 +1,123 @@
+{
+    "general": {
+        "title": "Hextech | Web Development"
+    },
+    "hero": {
+        "title": "Websites made to stand out",
+        "description": "We design and create exclusive and optimized websites to enhance your digital business and go beyond conventional templates.",
+        "PrimaryButton": "Request a meeting",
+        "SecondaryButton": "Our services"
+    },
+    "services": {
+        "title": "Our Services",
+        "description": "Choose the plan that fits your business goals and needs.",
+        "mod": "All our services are customizable and adaptable.",
+        "cards": {
+            "landing": {
+                "title": "Landing Page",
+                "description": "Ideal for presenting your business actively and directly.",
+                "features": {
+                    "f1": "3 pages",
+                    "f2": "SEO"
+                }
+            },
+            "db": {
+                "title": "Database Manager",
+                "description": "A solution to manage your information securely and efficiently.",
+                "features": {
+                    "f1": "Stock management",
+                    "f2": "Client management",
+                    "f3": "Multiplatform"
+                }
+            },
+            "price": "From",
+            "button": "I want this service"
+        }
+    },
+    "whyus": {
+        "title": "Quality, Performance, and Exclusivity in Every Project",
+        "description": "Forget generic templates and applications. We create unique websites with source code designed for your project.",
+        "features": {
+            "f1": "Our code is designed to be <span class='font-extrabold text-dorado-500'>fast</span>, efficient, and free of unnecessary elements. Unlike WordPress, every line is written specifically for your project, ensuring superior performance and a unique experience.",
+            "f2": "We develop <span class='font-extrabold text-dorado-500'>scalable</span> web solutions tailored to your needs. Our code grows with you, adapting to any change or challenge, ensuring a durable and efficient product.",
+            "f3": "We create <span class='font-extrabold text-dorado-500'>premium</span> websites that are fully customized and free from generic templates. Each project is designed to reflect exclusivity, quality, and the unique value of your brand."
+        },
+        "button": "Let's talk about your project"
+    },
+    "plans": {
+        "title": "Support Plans",
+        "description": "Choose the plan based on your needs and let's start working together.",
+        "cards": {
+            "basic": {
+                "title": "Basic",
+                "description": "Ideal if you already have a web server.",
+                "features": {
+                    "f1": "1 error resolved per month",
+                    "f2": "1 website deployment",
+                    "f3": "1 website modification per month"
+                }
+            },
+            "pro": {
+                "title": "Pro",
+                "description": "Ideal if you have a web server but don’t want complications.",
+                "features": {
+                    "f1": "5 errors resolved per month",
+                    "f2": "Website deployment",
+                    "f3": "5 website modifications per month",
+                    "f4": "Website installation"
+                }
+            },
+            "premium": {
+                "title": "Premium",
+                "description": "Ideal if you have clear ideas and want no hassle.",
+                "features": {
+                    "f1": "Error resolution",
+                    "f2": "Website deployment",
+                    "f3": "Website modifications",
+                    "f4": "Website installation"
+                }
+            },
+            "price": "month",
+            "button": "I want this plan"
+        }
+    },
+    "contact": {
+        "title": "Let's talk about your project",
+        "description": "Do you have an idea in mind? Fill out the form and we will contact you as soon as possible.",
+        "form": {
+            "name": {
+                "title": "Name",
+                "placeholder": "Name"
+            },
+            "surname": {
+                "title": "Last Name",
+                "placeholder": "Last Name"
+            },
+            "email": {
+                "title": "Email",
+                "placeholder": "example@email.com"
+            },
+            "msg": {
+                "title": "Message",
+                "placeholder": "Tell us about your idea..."
+            },
+            "checkbox": {
+                "title": "I accept the Privacy Policy"
+            },
+            "button": "Send Message"
+        }
+    },
+    "footer": {
+        "links": {
+            "legal": "Legal Notice",
+            "privacy": "Privacy Policy"
+        },
+        "rights": "All rights reserved"
+    },
+    "errors": {
+        "e404": {
+            "title": "Page Not Found",
+            "description": "The page you are looking for does not exist"
+        }
+    }
+}

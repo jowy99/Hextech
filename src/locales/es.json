@@ -1,0 +1,123 @@
+{
+    "general": {
+        "title": "Hextech | Desarrollo web"
+    },
+    "hero": {
+        "title": "Webs hechas para destacar",
+        "description": "Diseñamos y creamos webs exclusivas y optimizadas para potenciar tu negocio digital y superar las plantillas convencionales.",
+        "PrimaryButton": "Solicitar reunión",
+        "SecondaryButton": "Nuestros servicios"
+    },
+    "services":{
+        "title": "Nuestros servicios",
+        "description": "Elige el plan que se ajusta a tus objetivos y necesidades empresariales.",
+        "mod": "Todos nuestros servicios son modificables y adaptables.",
+        "cards": {
+            "landing": {
+                "title": "Landing page",
+                "description": "Ideal para presentar tu negocio de forma activa y directa.",
+                "features": {
+                    "f1": "3 páginas",
+                    "f2": "SEO"
+                }
+            },
+            "db": {
+                "title": "Gestor de Base de datos",
+                "description": "Solución para gestionar tu información de forma segura y eficiente.",
+                "features": {
+                    "f1": "Gestión de stocks",
+                    "f2": "Gestión de clientes",
+                    "f3": "Multiplataforma"
+                }
+            },
+            "price": "Desde",
+            "button": "Quiero este servicio"
+        }
+    },
+    "whyus": {
+        "title": "Calidad, Rendimiento y Exclusividad en cada proyecto",
+        "description": "Olvida las plantillas y aplicaciones genéricas. Creamos páginas web únicas con código fuente diseñado para tu proyecto.",
+        "features": {
+            "f1": "Nuestro código está diseñado para ser <span class='font-extrabold text-dorado-500'>rápido</span, eficiente y libre de elementos innecesarios. A diferencia de WordPress, cada línea es escrita específicamente para tu proyecto, garantizando un rendimiento superior y una experiencia única.",
+            "f2": "Desarrollamos soluciones web <span class='font-extrabold text-dorado-500'>escalables</span> y adaptadas a tus necesidades. Nuestro código crece contigo, ajustándose a cualquier cambio o desafío, asegurando un producto duradero y eficiente.",
+            "f3": "Creamos páginas <span class='font-extrabold text-dorado-500'>premium</span> totalmente personalizadas, libres de plantillas genéricas. Cada proyecto está diseñado para reflejar exclusividad, calidad y el valor único de tu marca."
+        },
+        "button": "Hablemos de tu proyecto"
+    },
+    "plans":{
+        "title": "Planes de soporte",
+        "description": "Elige el plan según tus necesidades y empecemos a trabajar juntos.",
+        "cards": {
+            "basic": {
+                "title": "Basic",
+                "description": "Ideal si ya dispones de un servidor web.",
+                "features": {
+                    "f1": "Solución de 1 error mensual",
+                    "f2": "1 Levantamiento de sitio web",
+                    "f3": "1 Modificación web mensual"
+                }
+            },
+            "pro": {
+                "title": "Pro",
+                "description": "Ideal si tienes un servidor web pero no quieres complicarte.",
+                "features": {
+                    "f1": "Solución de 5 errores mensuales",
+                    "f2": "Levantamiento de sitio web",
+                    "f3": "5 Modificaciones web mensuales",
+                    "f4": "Instalación web"
+                }
+            },
+            "premium": {
+                "title": "Premium",
+                "description": "Ideal si tienes las ideas claras y no quieres problemas.",
+                "features": {
+                    "f1": "Solución de errores",
+                    "f2": "Levantamiento de sitio web",
+                    "f3": "Modificaciones web",
+                    "f4": "Instalación web"
+                }
+            },
+            "price": "mes",
+            "button": "Quiero este plan"
+        }
+    },
+    "contact": {
+        "title": "Hablemos de tu proyecto",
+        "description": "¿Tienes una idea en mente? Rellena el formulario y nos pondremos en contacto contigo lo antes posible.",
+        "form": {
+            "name": {
+                "title": "Nombre",
+                "placeholder": "Nombre"
+            },
+            "surname": {
+                "title": "Apellidos",
+                "placeholder": "Apellidos"
+            },
+            "email": {
+                "title": "Correo electrónico",
+                "placeholder": "ejemplo@correo.com"
+            },
+            "msg": {
+                "title": "Mensaje",
+                "placeholder": "Cuéntanos sobre tu idea..."
+            },
+            "checkbox": {
+                "title": "Acepto la Política de Privacidad"
+            },
+            "button": "Enviar mensaje"
+        }
+    },
+    "footer": {
+        "links": {
+            "legal": "Aviso legal",
+            "privacy": "Política de privacidad"
+        },
+        "rights": "Todos los derechos reservados"
+    },
+    "errors": {
+        "e404": {
+            "title": "Página no encontrada",
+            "description": "La página que buscas no existe"
+        }
+    }
+}

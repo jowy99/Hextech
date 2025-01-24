@@ -3,22 +3,28 @@ import H1 from '../ui/basics/h1.astro'
 import H4 from '../ui/basics/h4.astro'
 import PrimaryButton from '../ui/basics/primaryButton.astro'
 import SecondaryButton from '../ui/basics/secondaryButton.astro'
+
+const { t, lang } = Astro.props;
 ---
 <section id="hero" class="flex flex-col items-center justify-center h-dvh min-h-dvh lg:h-screen lg:min-h-screen space-y-14">
     <div class="space-y-12 md:space-y-24">
         <H1 props="animate-fade-in-down">
-            Webs hechas para destacar
+            {t.hero.title}
         </H1>
         <H4 props="lg:mx-24 animate-fade-in animate-delay-100">
-            Diseñamos y creamos webs exclusivas y optimizadas para potenciar tu negocio digital y superar las plantillas convencionales.
+            {t.hero.description}
         </H4>
     </div>
-    <div class="flex flex-col items-center justify-center space-y-4 md:space-y-8 md:block lg:space-x-12 animate-fade-in animate-delay-100">
-        <a href="/#contact" aria-label="Formulario de contacto" role="button" tabindex="0">
-            <PrimaryButton>Solicitar reunión</PrimaryButton>
+    <div class="flex flex-col items-center justify-center space-y-4 md:space-y-8 lg:space-x-12 lg:flex-row lg:space-y-0 animate-fade-in animate-delay-100">
+        <a href={`/${lang}/#contact`} aria-label="Formulario de contacto" role="button" tabindex="0">
+            <PrimaryButton props="w-full">
+                {t.hero.PrimaryButton}
+            </PrimaryButton>
         </a>
-        <a href="/#services" aria-label="Servicios que proporcionamos" role="button" tabindex="0">
-            <SecondaryButton>Nuestros servicios</SecondaryButton>
+        <a href={`/${lang}/#services`} aria-label="Servicios que proporcionamos" role="button" tabindex="0">
+            <SecondaryButton props="w-full">
+                {t.hero.SecondaryButton}
+            </SecondaryButton>
         </a>
     </div>
 </section>

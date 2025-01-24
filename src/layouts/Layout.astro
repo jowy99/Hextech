@@ -3,10 +3,10 @@ import Nav from "../components/blocks/nav.astro";
 import Footer from "../components/blocks/footer.astro";
 import Blur from "../components/ui/elements/blur.astro";
 
-const { title } = Astro.props;
+const { title, lang } = Astro.props;
 ---
 <!DOCTYPE html>
-<html lang="es">
+<html lang={lang}>
   <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -1,16 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/blocks/hero.astro';
-import Services from '../components/blocks/services.astro';
-import Whyus from '../components/blocks/whyus.astro';
-import Plans from '../components/blocks/plans.astro';
-import Contact from '../components/blocks/contact.astro';
+export async function get() {
+  // Redirige al idioma predeterminado
+  return Astro.redirect('/en', 302);
+}
 ---
-
-<Layout title="Hextech | Web development">
-    <Hero />
-    <Services />
-    <Whyus />
-    <Plans />
-    <Contact />
-</Layout>

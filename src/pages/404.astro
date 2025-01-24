@@ -1,16 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import H1 from '../components/ui/basics/h1.astro'
+import Layout from "../layouts/Layout.astro";
+import H1 from "../components/ui/basics/h1.astro";
+import PrimaryButton from "../components/ui/basics/primaryButton.astro";
+import H2 from "../components/ui/basics/h2.astro";
 ---
-<Layout title="404 | Hextech | Web development">
-    <main class="flex items-center justify-center w-full h-screen min-h-screen">
-        <div class="space-y-24">
-            <H1 props="animate-fade-in-down">
-                Página no encontrada
-            </H1>
-            <H1 props="animate-fade-in-down animate-delay-100">
-                404
-            </H1>
-        </div>
+<Layout title="Page not found | Hextech" lang="en">
+    <main class="flex flex-col items-center justify-center h-screen min-h-screen">
+        <H1>Page not found</H1>
+        <H2>404</H2>
+        <a href="/en" aria-label="Go home" class="pt-12">
+            <PrimaryButton>Go home</PrimaryButton>
+        </a>
     </main>
 </Layout>
