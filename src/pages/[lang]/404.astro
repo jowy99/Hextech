@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import H1 from '../../components/ui/basics/h1.astro';
+import H2 from '../../components/ui/basics/h2.astro';
+import { loadTranslations } from '../../utils/loadTranslations';
+import { getStaticPaths } from '../../utils/languages';
+
+export { getStaticPaths };
+
+const { lang } = Astro.params;
+const loadtranslations = await loadTranslations(lang);
+Astro.response.status = 404; // Indica explícitamente el estado 404
+---
+<Layout title={loadtranslations.errors.e404.title} lang={lang}>
+    <section class="flex flex-col items-center justify-center h-screen space-y-12 min-hscreen">
+        <H1>{loadtranslations.errors.e404.title}</H1>
+        <H1>404</H1>
+        <H2>{loadtranslations.errors.e404.description}</H2>
+    </section>
+</Layout>
