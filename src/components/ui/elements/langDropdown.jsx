@@ -55,7 +55,7 @@ const Dropdown = ({ languages, onLanguageChange }) => {
   return (
     <div className="relative" ref={dropdownRef}>
       <button
-        className="flex items-center justify-between px-4 py-2 text-sm font-bold text-white border rounded-md shadow-md border-dorado-500 bg-verde-500 hover:bg-dorado-500 lg:text-md dark:bg-negro-600 dark:hover:bg-dorado-600"
+        className="flex items-center justify-between px-4 py-2 text-sm font-bold text-white border rounded-md shadow-md border-dorado-500 bg-verde-600 hover:bg-dorado-500 lg:text-md dark:bg-negro-600 dark:hover:bg-dorado-600"
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         aria-expanded={isDropdownOpen}
         aria-haspopup="true"
