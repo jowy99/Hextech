@@ -114,6 +114,58 @@
         },
         "rights": "Todos los derechos reservados"
     },
+    "privacy": {
+        "title": "Política de Privacidad",
+        "description": "En Hextech, valoramos tu privacidad. Este documento detalla cómo recopilamos, usamos y protegemos tus datos personales.",
+        "sections": {
+            "dataCollection": {
+                "title": "Recopilación de Datos",
+                "content": "Recopilamos tu nombre, apellidos, correo electrónico y el mensaje que desees enviarnos a través del formulario de contacto."
+            },
+            "dataUsage": {
+                "title": "Uso de Datos",
+                "content": "Los datos recopilados se utilizan únicamente para comunicarnos contigo sobre servicios, planes o consultas generales. No compartimos tus datos con terceros."
+            },
+            "dataStorage": {
+                "title": "Almacenamiento de Datos",
+                "content": "Tus datos se almacenan en nuestra bandeja de entrada de correo electrónico en un servidor privado. El servidor está protegido por contraseña y es accesible solo por el CEO de la empresa."
+            },
+            "userRights": {
+                "title": "Derechos del Usuario",
+                "content": "Dado que no almacenamos datos fuera de la bandeja de entrada del correo, no ofrecemos opciones de eliminación o acceso a los datos."
+            },
+            "policyUpdates": {
+                "title": "Actualizaciones de la Política",
+                "content": "Cualquier actualización de esta política será comunicada por correo electrónico. Última actualización: 24 de enero de 2025."
+            }
+        }
+    },
+    "legal": {
+        "title": "Aviso Legal",
+        "description": "Este aviso legal regula el uso del sitio web hextech.joelarnaud.com, propiedad de Hextech.",
+        "sections": {
+            "ownership": {
+                "title": "Titularidad",
+                "content": "El sitio web hextech.joelarnaud.com es operado por Hextech, una empresa con sede en España. Correo de contacto: contact@joelarnaud.com."
+            },
+            "responsibility": {
+                "title": "Responsabilidad",
+                "content": "Hextech no se hace responsable del uso indebido del sitio web o de la información proporcionada en él. Los usuarios son los únicos responsables de cumplir con las leyes aplicables."
+            },
+            "intellectualProperty": {
+                "title": "Propiedad Intelectual",
+                "content": "Todo el contenido de este sitio web, incluidos textos, imágenes, logotipos y diseños, es propiedad de Hextech y está protegido por las leyes de propiedad intelectual. Está prohibida su reproducción no autorizada."
+            },
+            "userObligations": {
+                "title": "Obligaciones del Usuario",
+                "content": "Los usuarios se comprometen a no realizar actividades que puedan dañar el sitio web, su contenido o su funcionalidad. El uso indebido puede dar lugar a acciones legales."
+            },
+            "applicableLaws": {
+                "title": "Legislación Aplicable",
+                "content": "Este sitio web opera bajo la legislación española. Cualquier disputa se resolverá bajo la jurisdicción de los tribunales españoles."
+            }
+        }
+    },
     "errors": {
         "e404": {
             "title": "Página no encontrada",

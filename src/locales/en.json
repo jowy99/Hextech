@@ -114,6 +114,58 @@
         },
         "rights": "All rights reserved"
     },
+    "privacy": {
+        "title": "Privacy Policy",
+        "description": "At Hextech, we value your privacy. This document outlines how we collect, use, and protect your personal data.",
+        "sections": {
+            "dataCollection": {
+                "title": "Data Collection",
+                "content": "We collect your name, surname, email, and the message you wish to send us through the contact form."
+            },
+            "dataUsage": {
+                "title": "Data Usage",
+                "content": "The collected data is used solely for communication regarding services, plans, or general inquiries. We do not share your data with third parties."
+            },
+            "dataStorage": {
+                "title": "Data Storage",
+                "content": "Your data is stored in our email inbox on a private server. The server is password-protected and only accessible by the company's CEO."
+            },
+            "userRights": {
+                "title": "User Rights",
+                "content": "Since we do not store data outside the email inbox, we do not offer data deletion or access options."
+            },
+            "policyUpdates": {
+                "title": "Policy Updates",
+                "content": "Any updates to this policy will be communicated via email. Last updated on January 24, 2025."
+            }
+        }
+    },
+    "legal": {
+        "title": "Legal Notice",
+        "description": "This legal notice regulates the use of the website hextech.joelarnaud.com, owned by Hextech.",
+        "sections": {
+            "ownership": {
+                "title": "Ownership",
+                "content": "The website hextech.joelarnaud.com is operated by Hextech, a company based in Spain. Contact email: contact@joelarnaud.com."
+            },
+            "responsibility": {
+                "title": "Responsibility",
+                "content": "Hextech is not responsible for any misuse of the website or the information provided on it. Users are solely responsible for adhering to applicable laws."
+            },
+            "intellectualProperty": {
+                "title": "Intellectual Property",
+                "content": "All content on this website, including text, images, logos, and designs, is owned by Hextech and is protected under intellectual property laws. Unauthorized reproduction is prohibited."
+            },
+            "userObligations": {
+                "title": "User Obligations",
+                "content": "Users agree not to engage in activities that could damage the website, its contents, or its functionality. Misuse may lead to legal actions."
+            },
+            "applicableLaws": {
+                "title": "Applicable Laws",
+                "content": "This website operates under Spanish law. Any disputes will be resolved under the jurisdiction of Spanish courts."
+            }
+        }
+    },
     "errors": {
         "e404": {
             "title": "Page Not Found",

@@ -1,0 +1,44 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { loadTranslations } from "../../utils/loadTranslations";
+import { getStaticPaths } from "../../utils/languages";
+
+export { getStaticPaths };
+
+const { lang } = Astro.params;
+const t = await loadTranslations(lang || 'en');
+
+// Define el tipo de `sections` para que Astro reconozca las propiedades.
+interface Section {
+  title: string;
+  content: string;
+}
+
+const sections: Record<string, Section> = t.privacy.sections;
+---
+<Layout title={t.general.title} lang={lang}>
+    <main class="min-h-screen mt-24 mb-12 lg:px-16 space-y-16">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl lg:text-5xl font-bold text-dorado-500 dark:text-dorado-400">
+                {t.privacy.title}
+            </h1>
+            <h2 class="mt-4 text-xl lg:text-2xl text-gray-300 dark:text-gray-300">
+                {t.privacy.description}
+            </h2>
+        </div>
+        <div class="max-w-4xl mx-auto space-y-12">
+            {Object.entries(sections).map(([key, section]) => (
+                <section 
+                    class="bg-white dark:bg-negro-700 rounded-lg border border-gray-500 dark:border-gray-700 shadow-lg p-6 lg:p-8"
+                >
+                    <h3 class="text-2xl font-semibold text-dorado-600 dark:text-dorado-400">
+                        {section.title}
+                    </h3>
+                    <p class="mt-2 text-lg text-negro-700 dark:text-gray-300">
+                        {section.content}
+                    </p>
+                </section>
+            ))}
+        </div>
+    </main>
+</Layout>

@@ -15,12 +15,15 @@ function handleLanguageChange(lang: string) {
 
   window.location.href = newPath; // Cambiar la URL
 }
+const { lang } = Astro.params;
 ---
 
 <nav class="fixed top-0 left-0 z-50 w-full bg-verde-600 dark:bg-negro-600">
   <div class="container flex items-center justify-between px-4 py-3 mx-auto max-w-7xl">
     <!-- Logo -->
-    <h1 class="text-2xl font-extrabold text-white drop-shadow-md lg:text-4xl">Hextech</h1>
+    <h1 class="text-2xl font-extrabold text-white drop-shadow-md lg:text-4xl">
+      <a href={`/${lang}`}>Hextech</a>
+    </h1>
 
     <Toggle client:load />
 
